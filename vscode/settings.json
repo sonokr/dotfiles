@@ -1,0 +1,263 @@
+{
+    // WORKBENCH
+    "workbench.colorTheme": "Iceberg",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.sideBar.location": "right",
+    "workbench.editorAssociations": {
+      "*.ipynb": "jupyter-notebook"
+    },
+    // TERMINAL
+    "#terminal.integrated.shell.windows#": "C:\\Windows\\System32\\wsl.exe",
+    "terminal.integrated.inheritEnv": false,
+    "terminal.integrated.profiles.osx": {
+      "zsh": {
+        "path": "/bin/zsh"
+      }
+    },
+    // EDITOR
+    "editor.minimap.enabled": false,
+    "editor.formatOnSave": true,
+    "editor.renderWhitespace": "all",
+    "editor.cursorStyle": "line",
+    "editor.lineNumbers": "on",
+    "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+    "editor.wordWrap": "off",
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+    "editor.rulers": [88, 119],
+    "editor.bracketPairColorization.enabled": true,
+    // FILES
+    "files.trimTrailingWhitespace": true,
+    // PYTHON
+    "[python]": {
+      "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit"
+      },
+      "editor.formatOnType": true
+    },
+    "python.formatting.autopep8Path": "black",
+    "python.formatting.provider": "black",
+    "python.linting.pylintEnabled": false,
+    "python.linting.enabled": true,
+    "python.showStartPage": false,
+    "python.languageServer": "Pylance",
+    "python.linting.flake8Args": ["--max-line-length 119"],
+    "python.linting.flake8Enabled": true,
+    "python.analysis.completeFunctionParens": true,
+    "python.analysis.logLevel": "Warning",
+    "python.autoComplete.addBrackets": true,
+    "python.diagnostics.sourceMapsEnabled": true,
+    "python.linting.banditEnabled": true,
+    "python.testing.pytestEnabled": true,
+    "python.linting.mypyEnabled": true,
+    // NOTEBOOK
+    "notebook.cellToolbarLocation": {
+      "default": "right",
+      "jupyter-notebook": "left"
+    },
+    // TYPESCRIPT
+    "[typescriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    // CMAKE
+    "cmake.configureOnOpen": true,
+    // VIM Extension
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.insertModeKeyBindings": [
+      {
+        "before": ["j", "j"],
+        "after": ["<Esc>"]
+      }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+      {
+        "before": ["<leader>", "d"],
+        "after": ["d", "d"]
+      },
+      {
+        "before": ["<C-n>"],
+        "commands": [":nohl"]
+      },
+      {
+        "before": ["<space>"],
+        "commands": ["vspacecode.space"]
+      },
+      {
+        "before": [","],
+        "commands": [
+          "vspacecode.space",
+          {
+            "command": "whichkey.triggerKey",
+            "args": "m"
+          }
+        ]
+      }
+    ],
+    "vim.leader": "<space>",
+    "vim.handleKeys": {
+      "<C-a>": false,
+      "<C-f>": false
+    },
+    // DRAW.IO
+    "hediet.vscode-drawio.local-storage": "eyIuZHJhd2lvLWNvbmZpZyI6IntcImxhbmd1YWdlXCI6XCJcIixcImN1c3RvbUZvbnRzXCI6W10sXCJsaWJyYXJpZXNcIjpcImdlbmVyYWw7Zmxvd2NoYXJ0XCIsXCJjdXN0b21MaWJyYXJpZXNcIjpbXCJMLnNjcmF0Y2hwYWRcIl0sXCJwbHVnaW5zXCI6W10sXCJyZWNlbnRDb2xvcnNcIjpbXSxcImZvcm1hdFdpZHRoXCI6MCxcImNyZWF0ZVRhcmdldFwiOmZhbHNlLFwicGFnZUZvcm1hdFwiOntcInhcIjowLFwieVwiOjAsXCJ3aWR0aFwiOjgyNyxcImhlaWdodFwiOjExNjl9LFwic2VhcmNoXCI6dHJ1ZSxcInNob3dTdGFydFNjcmVlblwiOnRydWUsXCJncmlkQ29sb3JcIjpcIiNkMGQwZDBcIixcImRhcmtHcmlkQ29sb3JcIjpcIiM2ZTZlNmVcIixcImF1dG9zYXZlXCI6dHJ1ZSxcInJlc2l6ZUltYWdlc1wiOm51bGwsXCJvcGVuQ291bnRlclwiOjAsXCJ2ZXJzaW9uXCI6MTgsXCJ1bml0XCI6MSxcImlzUnVsZXJPblwiOmZhbHNlLFwidWlcIjpcIlwifSJ9",
+    // MATERIAL-ICON
+    "material-icon-theme.showWelcomeMessage": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "terminal.external.windowsExec": "c:\\Windows\\System32\\wsl.exe",
+    "VSCodeNotion.accessToken": "secret_lK0HJLKrEWM6TrNl6TQ43knUEZD0FMMwJxQY2xkbVBL",
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "[dart]": {
+      "editor.formatOnSave": true,
+      "editor.formatOnType": true,
+      "editor.rulers": [80],
+      "editor.selectionHighlight": false,
+      "editor.suggest.snippetsPreventQuickSuggestions": false,
+      "editor.suggestSelection": "first",
+      "editor.tabCompletion": "onlySnippets",
+      "editor.wordBasedSuggestions": "off"
+    },
+    "vim.visualModeKeyBindingsNonRecursive": [
+      {
+        "before": ["<space>"],
+        "commands": ["vspacecode.space"]
+      },
+      {
+        "before": [","],
+        "commands": [
+          "vspacecode.space",
+          {
+            "command": "whichkey.triggerKey",
+            "args": "m"
+          }
+        ]
+      }
+    ],
+    "dart.debugExternalPackageLibraries": true,
+    "dart.debugSdkLibraries": false,
+    // for build
+    "latex-workshop.latex.outDir": "../out",
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    "latex-workshop.latex.autoBuild.run": "onSave",
+    // tex-workshopで紐づけられているPDF表示コマンドで表示するPDFビューア
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.latex.recipes": [
+      {
+        "name": "latexmk (lualatex)🧋",
+        "tools": ["lualatexmk"]
+      },
+      {
+        "name": "latexmk 🔃",
+        "tools": ["latexmk"]
+      },
+      {
+        "name": "latexmk (latexmkrc)",
+        "tools": ["latexmk_rconly"]
+      },
+      {
+        "name": "pdflatex ➞ bibtex ➞ pdflatex × 2",
+        "tools": ["pdflatex", "bibtex", "pdflatex", "pdflatex"]
+      },
+      {
+        "name": "Compile Rnw files",
+        "tools": ["rnw2tex", "latexmk"]
+      },
+      {
+        "name": "Compile Jnw files",
+        "tools": ["jnw2tex", "latexmk"]
+      },
+      {
+        "name": "tectonic",
+        "tools": ["tectonic"]
+      }
+    ],
+    "latex-workshop.latex.tools": [
+      {
+        "name": "lualatexmk",
+        "command": "latexmk",
+        "args": [
+          "-synctex=1",
+          "-file-line-error",
+          "-interaction=nonstopmode",
+          "-lualatex",
+          "-outdir=%OUTDIR%",
+          "%DOC%"
+        ],
+        "env": {}
+      },
+      {
+        "name": "latexmk",
+        "command": "latexmk",
+        "args": [
+          "-synctex=1",
+          "-interaction=nonstopmode",
+          "-file-line-error",
+          "-pdf",
+          "-outdir=%OUTDIR%",
+          "%DOC%"
+        ],
+        "env": {}
+      },
+      {
+        "name": "latexmk_rconly",
+        "command": "latexmk",
+        "args": ["%DOC%"],
+        "env": {}
+      },
+      {
+        "name": "pdflatex",
+        "command": "pdflatex",
+        "args": [
+          "-synctex=1",
+          "-interaction=nonstopmode",
+          "-file-line-error",
+          "%DOC%"
+        ],
+        "env": {}
+      },
+      {
+        "name": "bibtex",
+        "command": "bibtex",
+        "args": ["%DOCFILE%"],
+        "env": {}
+      },
+      {
+        "name": "rnw2tex",
+        "command": "Rscript",
+        "args": [
+          "-e",
+          "knitr::opts_knit$set(concordance = TRUE); knitr::knit('%DOCFILE_EXT%')"
+        ],
+        "env": {}
+      },
+      {
+        "name": "jnw2tex",
+        "command": "julia",
+        "args": ["-e", "using Weave; weave(\"%DOC_EXT%\", doctype=\"tex\")"],
+        "env": {}
+      },
+      {
+        "name": "jnw2texmintex",
+        "command": "julia",
+        "args": [
+          "-e",
+          "using Weave; weave(\"%DOC_EXT%\", doctype=\"texminted\")"
+        ],
+        "env": {}
+      },
+      {
+        "name": "tectonic",
+        "command": "tectonic",
+        "args": ["--synctex", "--keep-logs", "%DOC%.tex"],
+        "env": {}
+      }
+    ],
+    "files.autoSave": "afterDelay",
+    "editor.accessibilitySupport": "off",
+    "window.zoomLevel": 1,
+    "cmake.showOptionsMovedNotification": false
+  }

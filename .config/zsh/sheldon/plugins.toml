@@ -1,0 +1,32 @@
+shell = "zsh"
+
+[templates]
+defer = "{{ hooks | get: \"pre\" | nl }}{% for file in files %}zsh-defer source \"{{ file }}\"\n{% endfor %}{{ hooks | get: \"post\" | nl }}"
+
+[plugins.zsh-defer]
+github = "romkatv/zsh-defer"
+
+[plugins.zsh-git-prompt]
+github = 'olivierverdier/zsh-git-prompt'
+apply = ["defer"]
+
+[plugins.enhancd]
+github = 'b4b4r07/enhancd'
+apply = ["defer"]
+
+[plugins.zsh-autosuggestions]
+github = 'zsh-users/zsh-autosuggestions'
+apply = ["defer"]
+
+[plugins.git-open]
+github = 'paulirish/git-open'
+apply = ["defer"]
+
+[plugins.zsh-syntax-highlighting]
+github = 'zsh-users/zsh-syntax-highlighting'
+apply = ["defer"]
+
+[plugins.zsh-completion]
+github = 'zsh-users/zsh-completions'
+apply = ["defer"]
+

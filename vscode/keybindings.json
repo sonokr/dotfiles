@@ -1,0 +1,190 @@
+// Place your key bindings in this file to override the defaults
+[
+	// terminal
+    {
+        "key": "ctrl+space t",
+        "command": "workbench.action.terminal.focus",
+    },
+    {
+        "key": "ctrl+space n",
+        "command": "workbench.action.terminal.newInActiveWorkspace",
+		"when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+space w",
+        "command": "workbench.action.terminal.kill",
+		"when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+space -",
+        "command": "workbench.action.terminal.split",
+		"when": "terminalFocus"
+    },
+	{
+        "key": "ctrl+space shift+\\",
+        "command": "workbench.action.terminal.split",
+		"when": "editorFocus"
+    },
+    {
+        "key": "ctrl+space n",
+        "command": "workbench.action.terminal.focusNext",
+		"when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+space p",
+        "command": "workbench.action.terminal.focusPrevious",
+		"when": "terminalFocus"
+    },
+
+	// editor
+    {
+        "key": "ctrl+space enter",
+        "command": "workbench.action.focusActiveEditorGroup",
+    },
+    {
+        "key": "ctrl+space -",
+        "command": "workbench.action.splitEditorDown",
+		"when": "editorFocus"
+    },
+	{
+        "key": "ctrl+space shift+\\",
+        "command": "workbench.action.splitEditorRight",
+		"when": "editorFocus"
+    },
+    {
+        "key": "ctrl+space j",
+        "command": "workbench.action.focusBelowGroup",
+		"when": "editorFocus"
+    },
+    {
+        "key": "ctrl+space k",
+        "command": "workbench.action.focusAboveGroup",
+		"when": "editorFocus"
+    },
+    {
+        "key": "ctrl+space h",
+        "command": "workbench.action.focusLeftGroup",
+		"when": "editorFocus"
+    },
+    {
+        "key": "ctrl+space l",
+        "command": "workbench.action.focusRightGroup",
+		"when": "editorFocus"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.nextEditor",
+		"when": "editorFocus || terminalFocus"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "workbench.action.previousEditor",
+		"when": "editorFocus || terminalFocus"
+    },
+
+	// sidebar
+    {
+        "key": "ctrl+space tab",
+        "command": "workbench.files.action.focusFilesExplorer",
+    },
+    {
+        "key": "ctrl+space tab",
+        "command": "workbench.action.closeSidebar",
+		"when": "sideBarFocus"
+    },
+    {
+        "key": "ctrl+space w",
+        "command": "workbench.action.closeSidebar",
+		"when": "sideBarFocus"
+    },
+
+	// explorer
+	{
+        "key": "ctrl+p",
+        "command": "selectPrevSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "list.focusDown",
+        "when": "explorerViewletFocus && listFocus &&explorerViewletVisible && !inputFocus"
+    },
+	{
+        "key": "ctrl+b",
+        "command": "list.collapse",
+        "when": "explorerViewletFocus && listFocus &&explorerViewletVisible && !inputFocus"
+    },
+    {
+        "key": "ctrl+f",
+        "command": "list.expand",
+        "when": "explorerViewletFocus && listFocus &&explorerViewletVisible && !inputFocus"
+    },
+	{
+        "key": "a",
+        "command": "explorer.newFile",
+        "when": "explorerViewletFocus && listFocus &&explorerViewletVisible && !inputFocus"
+    },
+    {
+        "key": "shift+a",
+        "command": "explorer.newFolder",
+        "when": "explorerViewletFocus && listFocus &&explorerViewletVisible && !inputFocus"
+    },
+    {
+        "key": "d",
+        "command": "deleteFile",
+        "when": "explorerViewletFocus && listFocus &&explorerViewletVisible && !inputFocus"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "renameFile",
+        "when": "explorerViewletFocus && listFocus &&explorerViewletVisible && !inputFocus"
+    },
+	{
+        "key": "enter",
+        "command": "list.select",
+        "when": "explorerViewletFocus && listFocus &&explorerViewletVisible && !inputFocus"
+    },
+
+    // search
+    {
+        "key": "ctrl+space f",
+        "command": "workbench.view.search"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "extension.multiCommand.execute",
+        "args": {
+            "sequence": [
+                "search.action.focusSearchList",
+                "list.focusDown",
+            ]
+        },
+        "when": "searchViewletFocus && !listFocus",
+    },
+    {
+        "key": "ctrl+p",
+        "command": "extension.multiCommand.execute",
+        "args": {
+            "sequence": [
+                "search.action.focusSearchList",
+                "list.focusUp",
+            ]
+        },
+        "when": "searchViewletFocus && !listFocus",
+    },
+    {
+        "key": "ctrl+n",
+        "command": "list.focusDown",
+        "when": "searchViewletFocus && listFocus"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "list.focusUp",
+        "when": "searchViewletFocus && listFocus"
+    },
+    {
+        "key": "enter",
+        "command": "list.select",
+        "when": "searchViewletFocus && listFocus"
+    }
+]
