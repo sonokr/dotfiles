@@ -68,3 +68,4 @@ function cd_ghq_list() {
 zle -N cd_ghq_list
 bindkey '^]' cd_ghq_list
 
+eval "$(zoxide init zsh)"

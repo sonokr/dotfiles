@@ -1,6 +1,6 @@
-import = ["~/.config/alacritty/themes/themes/iceberg1.toml"]
+general.import = ["~/.config/alacritty/themes/themes/iceberg1.toml"]
 
-[shell]
+[terminal.shell]
 program = "/bin/zsh"
 # args = ["-l", "-c", "tmux a -t default || tmux new -s default"]
 

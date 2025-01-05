@@ -27,3 +27,8 @@ source $ZSHRC_DIR/nonlazy.zsh
 zsh-defer source $ZSHRC_DIR/lazy.zsh
 zsh-defer unfunction source
 
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/ryotakusunoki/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+eval "$(/opt/homebrew/bin/mise activate zsh)"
