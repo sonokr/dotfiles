@@ -28,6 +28,6 @@ TERM = "alacritty"
 
 [window]
 decorations = "none"
-opacity = 1.0
+opacity = 0.9
 padding = { x = 1, y = 1 }
 

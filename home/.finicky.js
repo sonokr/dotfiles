@@ -3,21 +3,15 @@ module.exports = {
   handlers: [
     {
       match: [
-        /^https?:\/\/calendar\.google\.com\/.*$/,
-        /^https?:\/\/meet\.google\.com\/.*$/,
+        /^https?:\/\/www\.netflix\.com\/.*$/,
+        /^https?:\/\/video\.unext\.jp\/.*$/,
+        /^https?:\/\/www\.amazon\.co\.jp\/Amazon-Video\/.*$/,
+        /^https?:\/\/tv\.dmm\.com\/vod\/.*$/,
+
       ],
       browser: {
-        name: "Google Chrome",
-        profile: "Profile 1" // ユーザーB
-      }
-    },
-    {
-      match: [
-        /^https?:\/\/github\.com\/.*$/,
-      ],
-      browser: {
-        name: "Google Chrome",
-        profile: "Default" // ユーザーA
+        name: "Arc",
+        profile: "Default"
       }
     },
   ]

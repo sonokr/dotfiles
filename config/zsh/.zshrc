@@ -13,6 +13,8 @@ function ensure_zcompiled {
 }
 ensure_zcompiled ~/.zshrc
 
+source $ZSHRC_DIR/nonlazy.zsh
+
 # sheldon cache technique
 export SHELDON_CONFIG_DIR="$ZSHRC_DIR/sheldon"
 sheldon_cache="$SHELDON_CONFIG_DIR/sheldon.zsh"
@@ -23,12 +25,5 @@ fi
 source "$sheldon_cache"
 unset sheldon_cache sheldon_toml
 
-source $ZSHRC_DIR/nonlazy.zsh
-zsh-defer source $ZSHRC_DIR/lazy.zsh
-zsh-defer unfunction source
+zsh-defer zsh-defer unfunction source
 
-
-### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="/Users/ryotakusunoki/.rd/bin:$PATH"
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
-eval "$(/opt/homebrew/bin/mise activate zsh)"
