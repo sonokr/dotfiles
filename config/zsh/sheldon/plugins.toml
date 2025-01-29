@@ -5,13 +5,14 @@ defer = "{{ hooks | get: \"pre\" | nl }}{% for file in files %}zsh-defer source 
 
 [plugins.zsh-defer]
 github = "romkatv/zsh-defer"
+hooks.post = '''
+zsh-defer source $ZSHRC_DIR/lazy.zsh
+zsh-defer -t 0.001 autoload -Uz compinit
+zsh-defer -t 0.001 compinit
+'''
 
 [plugins.zsh-git-prompt]
 github = 'olivierverdier/zsh-git-prompt'
-apply = ["defer"]
-
-[plugins.enhancd]
-github = 'b4b4r07/enhancd'
 apply = ["defer"]
 
 [plugins.zsh-autosuggestions]
@@ -29,4 +30,12 @@ apply = ["defer"]
 [plugins.zsh-completion]
 github = 'zsh-users/zsh-completions'
 apply = ["defer"]
+
+[plugins.powerlevel10k]
+github = 'romkatv/powerlevel10k'
+# use = ['{{ name }}.zsh-theme']
+hooks.pre = '''
+ZLE_PROMPT_INDENT=0
+source $ZSHRC_DIR/plugrc/p10k.zsh
+'''
 
