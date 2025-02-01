@@ -30,10 +30,11 @@ function cache_eval {
 }
 
 export FZF_DEFAULT_OPTS=" \
---color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
---color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
---color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
---multi"
+  --color=bg:#161821,bg+:#1b1e2b,fg:#c6c8d1,fg+:#c6c8d1 \
+  --color=spinner:#84a0c6,hl:#84a0c6,hl+:#84a0c6 \
+  --color=info:#84a0c6,header:#8ca68c,pointer:#84a0c6 \
+  --color=marker:#84a0c6,prompt:#84a0c6 \
+  --multi"
 
 export ZSH_AUTOSUGGEST_USE_ASYNC=1
 
@@ -68,22 +69,9 @@ export PKG_CONFIG_PATH="/opt/homebrew/opt/tcl-tk/lib/pkgconfig"
 git config --global user.name "KUSUNKOI Ryota"
 git config --global user.email "ryotakusunoki@hotmail.com"
 
-function cd_ghq_list() {
-  local destination_dir="~/git-src/$(ghq list | fzf)"
-  if [ -n "$destination_dir" ]; then
-    BUFFER="cd $destination_dir"
-    zle accept-line
-  fi
-  zle clear-screen
-}
-zle -N cd_ghq_list
-bindkey '^]' cd_ghq_list
-
-
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/ryotakusunoki/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
-
 export PATH="$PATH:/Users/ryotakusunoki/.spicetify"
 
 zsh-defer cache_eval "zoxide init zsh --cmd d"

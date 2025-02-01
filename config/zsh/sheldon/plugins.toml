@@ -23,8 +23,8 @@ apply = ["defer"]
 github = 'paulirish/git-open'
 apply = ["defer"]
 
-[plugins.zsh-syntax-highlighting]
-github = 'zsh-users/zsh-syntax-highlighting'
+[plugins.fast-syntax-highlighting]
+github = 'zdharma-continuum/fast-syntax-highlighting'
 apply = ["defer"]
 
 [plugins.zsh-completion]
