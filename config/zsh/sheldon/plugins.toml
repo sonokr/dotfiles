@@ -43,8 +43,8 @@ source $ZSHRC_DIR/plugrc/p10k.zsh
 github = 'yuki-yano/zeno.zsh'
 use = ['zeno.zsh']
 apply = ['defer']
-hooks.pre = 'zsh-defer $ZSHRC_DIR/plugrc/zeno_atinit.zsh'
+hooks.pre = 'zsh-defer $ZSHRC_DIR/plugrc/zeno/zeno_atinit.zsh'
 hooks.post = '''
-zsh-defer source $ZSHRC_DIR/plugrc/zeno_atload.zsh
+zsh-defer source $ZSHRC_DIR/plugrc/zeno/zeno_atload.zsh
 '''
 

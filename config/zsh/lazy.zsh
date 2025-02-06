@@ -1,6 +1,4 @@
 setopt prompt_subst
-NEWLINE=$'\n'
-PROMPT="${NEWLINE}%K{13} %F{0}%~%f %k${NEWLINE}%F{4}( '_') < %f"
 
 alias ...='cd ../..'
 alias ....='cd ../../..'
