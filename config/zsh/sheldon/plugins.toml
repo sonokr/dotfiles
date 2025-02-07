@@ -11,26 +11,6 @@ zsh-defer -t 0.001 autoload -Uz compinit
 zsh-defer -t 0.001 compinit
 '''
 
-[plugins.zsh-git-prompt]
-github = 'olivierverdier/zsh-git-prompt'
-apply = ["defer"]
-
-[plugins.zsh-autosuggestions]
-github = 'zsh-users/zsh-autosuggestions'
-apply = ["defer"]
-
-[plugins.git-open]
-github = 'paulirish/git-open'
-apply = ["defer"]
-
-[plugins.fast-syntax-highlighting]
-github = 'zdharma-continuum/fast-syntax-highlighting'
-apply = ["defer"]
-
-[plugins.zsh-completion]
-github = 'zsh-users/zsh-completions'
-apply = ["defer"]
-
 [plugins.powerlevel10k]
 github = 'romkatv/powerlevel10k'
 # use = ['{{ name }}.zsh-theme']
@@ -47,4 +27,41 @@ hooks.pre = 'zsh-defer $ZSHRC_DIR/plugrc/zeno/zeno_atinit.zsh'
 hooks.post = '''
 zsh-defer source $ZSHRC_DIR/plugrc/zeno/zeno_atload.zsh
 '''
+
+[plugins.fzf-tab]
+github = 'Aloxaf/fzf-tab'
+apply = ['defer']
+hooks.pre = '''
+zstyle ':fzf-tab:*' use-fzf-default-opts yes
+'''
+
+[plugins.syntax-highlight]
+github = 'z-shell/F-Sy-H'
+apply = ['defer']
+
+[plugins.k]
+github = 'supercrabtree/k'
+use = ['k.sh']
+apply = ["defer"]
+
+[plugins.bd]
+github = 'Tarrasch/zsh-bd'
+use = ['bd.zsh']
+apply = ["defer"]
+
+[plugins.zsh-completion]
+github = 'zsh-users/zsh-completions'
+apply = ["defer"]
+
+[plugins.zsh-git-prompt]
+github = 'olivierverdier/zsh-git-prompt'
+apply = ["defer"]
+
+[plugins.git-open]
+github = 'paulirish/git-open'
+apply = ["defer"]
+
+[plugins.xpanes]
+github = 'greymd/tmux-xpanes'
+apply = ['defer']
 

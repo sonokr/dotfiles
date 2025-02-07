@@ -67,9 +67,17 @@ export PKG_CONFIG_PATH="/opt/homebrew/opt/tcl-tk/lib/pkgconfig"
 git config --global user.name "KUSUNKOI Ryota"
 git config --global user.email "ryotakusunoki@hotmail.com"
 
+function cdr() {
+  if git rev-parse --show-toplevel > /dev/null 2>&1; then
+    cd "$(git rev-parse --show-toplevel)"
+  else
+    echo "Not in a git repository"
+  fi
+}
+
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/ryotakusunoki/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
 export PATH="$PATH:/Users/ryotakusunoki/.spicetify"
 
-zsh-defer cache_eval "zoxide init zsh --cmd d"
+zsh-defer cache_eval "zoxide init zsh"

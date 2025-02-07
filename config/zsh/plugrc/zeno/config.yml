@@ -1,0 +1,90 @@
+snippets:
+  - name: git add
+    keyword: ga
+    snippet: git add
+  - name: git commit
+    keyword: gc
+    snippet: git commit -v
+  - name: git status
+    keyword: gs
+    snippet: git status --short --branch
+  # snippet with placeholder
+  - name: "null"
+    keyword: "null"
+    snippet: ">/dev/null 2>&1"
+    # auto expand condition
+    # If not defined, it is only valid at the beginning of a line.
+    context:
+      # buffer: '' 
+      lbuffer: '.+\s'
+      # rbuffer: ''
+  - name: branch
+    keyword: B
+    snippet: git symbolic-ref --short HEAD
+    context:
+      lbuffer: '^git\s+checkout\s+'
+    evaluate: true # eval snippet
+  - name: expand ls to exa
+    keyword: ls
+    snippet: exa
+  - name: git tree view
+    keyword: gls
+    snippet: exa -Tla --git --git-ignore -I .git
+  - name: alias ranger -> joshuto
+    keyword: ranger
+    snippet: joshuto
+  - name: abbr fastfetch
+    keyword: ffetch
+    snippet: fastfetch
+  - name: install package by paru
+    keyword: inst
+    snippet: paru -S
+  - name: remove package by paru
+    keyword: unst
+    snippet: paru -Rns
+  - name: remove package no longer needed
+    keyword: autoremove
+    snippet: sudo sh -c 'pacman -Qdtq | pacman -Rs -'
+  - name: expand :q to exit
+    keyword: :q
+    snippet: exit
+
+completions:
+  - name: kill
+    patterns: 
+      - "^kill( -9)? $"
+    sourceCommand: "ps -ef | sed 1d"
+    options:
+      --multi: true
+      --prompt: "'Kill Process> '"
+    callback: "awk '{print $2}'"
+  - name: install package by pacman
+    patterns:
+      - "^sudo pacman -S $"
+    sourceCommand: "pacman -Sl"
+    options:
+      --multi: true
+      --prompt: "'Package to install> '"
+      --nth: "2"
+      --preview: "read _ i _ <<< {}; pacman -Sii \\$i"
+    callback: "awk '{print $2}'"
+  - name: install package by paru
+    patterns:
+      - "^paru -S $"
+    sourceCommand: "paru -Sl"
+    options:
+      --multi: true
+      --prompt: "'Package to install> '"
+      --nth: "2"
+      --preview: "read _ i _ <<< {}; paru -Sii \\$i"
+    callback: "awk '{print $2}'"
+  - name: remove package
+    patterns:
+      - "^paru -Rns $"
+    sourceCommand: "pacman -Qe"
+    options:
+      --multi: true
+      --prompt: "'Package to remove> '"
+      --nth: "1"
+      --preview: "read i _ <<< {}; paru -Sii \\$i"
+    callback: "awk '{print $1}'"
