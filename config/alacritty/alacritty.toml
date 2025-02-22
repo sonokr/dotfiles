@@ -1,8 +1,11 @@
-general.import = ["~/.config/alacritty/themes/themes/iceberg1.toml"]
+[general]
+import = [
+  "~/.config/alacritty/themes/themes/iceberg1.toml"
+]
 
-[terminal.shell]
-program = "/bin/zsh"
-# args = ["-l", "-c", "tmux a -t default || tmux new -s default"]
+[terminal]
+# shell = { program = "/bin/zsh", args = ["-l -c tmux a -t default || tmux new -s default"] }
+shell = "/bin/zsh"
 
 [font]
 size = 15

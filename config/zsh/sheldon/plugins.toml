@@ -64,4 +64,3 @@ apply = ["defer"]
 [plugins.xpanes]
 github = 'greymd/tmux-xpanes'
 apply = ['defer']
-

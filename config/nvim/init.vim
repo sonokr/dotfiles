@@ -1,3 +1,5 @@
+let $LANG='en_US.UTF-8'
+
 if &compatible
     set nocompatible
 endif
