@@ -5,6 +5,7 @@ alias ls=lsd
 alias grep=rg
 alias find=fd
 alias cat=bat
+alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
 zstyle ':completion:*:default' menu select=1
 
 EDITOR='nvim'
@@ -57,3 +58,5 @@ if [ "$(uname -m)" = "arm64" ]; then
 else
     zsh-defer cache_eval "/usr/local/bin/brew shellenv"
 fi
+
+eval "$(/opt/homebrew/bin/brew shellenv)"

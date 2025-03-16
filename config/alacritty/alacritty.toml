@@ -34,3 +34,10 @@ decorations = "none"
 opacity = 0.95
 padding = { x = 1, y = 1 }
 
+[keyboard]
+bindings = [
+  { key = "LBracket", mods = "Control", chars = "\u001b" },
+  { key = "Tab", mods = "Control", chars = "\u001b[27;5;9~" },
+  { key = "Tab", mods = "Control|Shift", chars = "\u001b[27;6;9~" },
+]
+
