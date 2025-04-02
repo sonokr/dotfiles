@@ -126,3 +126,11 @@ nnoremap <silent> <Leader>P :Files<CR>
 nnoremap <silent> <Leader>s :RG<CR>
 nnoremap <silent> <Leader>c :Commits<CR>
 
+highlight Normal   ctermbg=none guibg=none
+highlight NonText  ctermbg=none guibg=none
+highlight LineNr       ctermbg=none guibg=none
+highlight SignColumn   ctermbg=none guibg=none
+highlight VertSplit    ctermbg=none guibg=none
+highlight StatusLine   ctermbg=none guibg=none
+highlight StatusLineNC ctermbg=none guibg=none
+
