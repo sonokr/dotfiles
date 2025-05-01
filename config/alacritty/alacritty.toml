@@ -4,8 +4,8 @@ import = [
 ]
 
 [terminal]
-# shell = { program = "/bin/zsh", args = ["-l -c tmux a -t default || tmux new -s default"] }
-shell = "/bin/zsh"
+shell = { program = "/bin/zsh", args = ["-l", "-c", "/opt/homebrew/bin/tmux a -t default || /opt/homebrew/bin/tmux new -s default"] }
+# shell = "/bin/zsh"
 
 [font]
 size = 15
@@ -30,9 +30,10 @@ style = "Bold Italic"
 TERM = "alacritty"
 
 [window]
-decorations = "none"
-opacity = 0.95
-padding = { x = 1, y = 1 }
+decorations = "Transparent"
+opacity = 0.9
+padding = { x = 1, y = 27 }
+blur = true
 
 [keyboard]
 bindings = [

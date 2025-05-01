@@ -27,3 +27,5 @@ unset sheldon_cache sheldon_toml
 
 zsh-defer zsh-defer unfunction source
 
+
+export PATH=/Users/ryotakusunoki/.tiup/bin:$PATH

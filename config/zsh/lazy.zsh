@@ -12,12 +12,20 @@ EDITOR='nvim'
 VISUAL='nvim'
 
 export FZF_DEFAULT_OPTS=" \
-  --color=bg:#161821,bg+:#1b1e2b,fg:#c6c8d1,fg+:#c6c8d1 \
+  --color=bg:-1,bg+:-1 \
+  --color=fg:#c6c8d1,fg+:#c6c8d1 \
   --color=spinner:#84a0c6,hl:#84a0c6,hl+:#84a0c6 \
   --color=info:#84a0c6,header:#8ca68c,pointer:#84a0c6 \
   --color=marker:#84a0c6,prompt:#84a0c6 \
   --multi"
 export ZSH_AUTOSUGGEST_USE_ASYNC=1
+export NAVI_FZF_OVERRIDES=" \
+  --color=bg:-1,bg+:-1 \
+  --color=fg:#c6c8d1,fg+:#c6c8d1 \
+  --color=spinner:#84a0c6,hl:#84a0c6,hl+:#84a0c6 \
+  --color=info:#84a0c6,header:#8ca68c,pointer:#84a0c6 \
+  --color=marker:#84a0c6,prompt:#84a0c6 \
+  --multi"
 
 export PATH=$PATH:$HOME/bin
 export GOPATH=$HOME/.go
